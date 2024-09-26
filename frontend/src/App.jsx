@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom"
 import Home from "./pages/home/home"
 import Login from "./pages/login/Login"
-import SignUp from "./pages/signup/SinUp"
+import SignUp from "./pages/signup/SignUp"
+import { Toaster} from "react-hot-toast"
 
 /* eslint-disable react/no-unknown-property */
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
        </Routes>
+       <Toaster />
       </div>
     </>
   )
