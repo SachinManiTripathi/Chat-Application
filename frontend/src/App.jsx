@@ -1,6 +1,7 @@
+import { Route, Routes } from "react-router-dom"
 import Home from "./pages/home/home"
 import Login from "./pages/login/Login"
-import SignUp from "./pages/signup/Sinup"
+import SignUp from "./pages/signup/SinUp"
 
 /* eslint-disable react/no-unknown-property */
 function App() {
@@ -9,11 +10,11 @@ function App() {
   return (
     <>
       <div className="p-4 h-screen flex items-center justify-center">
-        <Login />
-        <SignUp />
-      </div>
-      <div>
-        <Home />
+       <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<SignUp />} />
+       </Routes>
       </div>
     </>
   )
