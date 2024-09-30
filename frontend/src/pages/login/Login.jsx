@@ -37,7 +37,7 @@ const Login = () => {
    					</div>
     
   				<div>
-    						<label className='label'>
+    					<label className='label'>
     							<span className='text-base label-text'>Password</span>
 						</label>
     						<input

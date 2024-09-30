@@ -8,7 +8,7 @@ export const sendMessage = async (req, res) =>{
         const {id:receiverId} = req.params;
         const senderId = req.user._id;
 
-       const conversation =  await Conversation.findOne({
+       let conversation =  await Conversation.findOne({
             participants:{$all : [senderId, receiverId]}
         })
 
@@ -33,7 +33,7 @@ export const sendMessage = async (req, res) =>{
 
         // await conversation.save();
         // await newMessage.save();
-        await Promise.all([conversation.save()], [newMessage.save()]);
+        await Promise.all([conversation.save() ,newMessage.save()]);
 
         res.status(201).json(newMessage);
 
