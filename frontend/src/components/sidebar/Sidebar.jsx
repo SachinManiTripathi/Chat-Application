@@ -8,7 +8,11 @@ const Sidebar = () => {
 			<SearchInput />
 			<div className='divider px-3'></div>
 			<Conversations />
-			<LogoutButton />
+			<div 
+				className='divider my-10' 
+				style={{marginBottom:'-0.5rem'}}>
+				<LogoutButton />
+			</div>
 		</div>
 	);
 };

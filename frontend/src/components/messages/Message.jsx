@@ -14,14 +14,17 @@ const Message = ({ message }) => {
 	const shakeClass = message.shouldShake ? "shake" : "";
 
 	return (
-		<div className={`chat ${chatClassName}`}>
+		<div className={`chat ${chatClassName}`} style={{marginBottom:'1rem'}}>
     <div className="flex content-center">
 			<div className='chat-image avatar mr-12'>
-				<div className='w-10 rounded-full' style={{width:'40px',height:'40px'}}>
+				<div className='w-10 rounded-full' 
+              style={{width:'40px',height:'40px',marginRight:'1rem'}}>
 					<img alt='Tailwind CSS chat bubble component' src={profilePic} />
 				</div>
 			</div>
-			<div className={`chat-bubble text-white ${bubbleBgColor} ${shakeClass} pb-2 self-center` }>{message.message}</div>
+			<div 
+        className={`chat-bubble text-white ${bubbleBgColor} ${shakeClass} pb-2 self-center` }
+        style={{paddingTop:'0.5rem'}}>{message.message}</div>
     </div>
 			<div className='chat-footer opacity-50 text-xs flex gap-1 items-center'>{formattedTime}</div>
 		</div>
