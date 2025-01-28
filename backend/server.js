@@ -15,6 +15,13 @@ const __dirname = path.resolve();
 app.use(express.json()); //to parse the incoming requests with json payloads from req.body
 app.use(cookieParser());
 
+app.use(cors({
+	origin:["https://deploy-mern-lwhq.vercel.app"],
+	methods:["POST","GET"],
+	credentials:true
+}))
+	
+
 app.use("/api/auth",authRoutes);
 app.use("/api/users",userRoutes);
 app.use("/api/messages",messageRoutes);
