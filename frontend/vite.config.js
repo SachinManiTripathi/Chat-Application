@@ -10,8 +10,7 @@ export default defineConfig({
       "/api":{
         target: "https://chat-application-api-by-sachin.onrender.com",
         changeOrigin: true, // Ensures that the Origin header is correctly set to the target API's domain
-        secure: false, // Continue to bypass SSL verification if needed
-
+        secure: false, 
       }
     }
   }
