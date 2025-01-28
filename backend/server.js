@@ -20,7 +20,9 @@ app.use(cors({
 	methods:["POST","GET"],
 	credentials:true
 }))
-	
+app.get("/",(req,res) =>{
+	res.json("Hello");
+}	
 
 app.use("/api/auth",authRoutes);
 app.use("/api/users",userRoutes);
