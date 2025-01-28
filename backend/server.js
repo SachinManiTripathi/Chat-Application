@@ -14,7 +14,11 @@ dotenv.config();
 const __dirname = path.resolve();
 
 app.use(express.json()); //to parse the incoming requests with json payloads from req.body
-app.use(cors());
+app.use(cors({
+	origin: 'https://chat-application-mern-by-sachin.onrender.com', // or '*' to allow all origins
+  	methods: 'GET,POST',
+  	allowedHeaders: 'Content-Type, Authorization',
+}));
 app.use(cookieParser());
 
 app.use("/api/auth",authRoutes);
