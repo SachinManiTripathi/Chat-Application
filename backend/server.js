@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import authRoutes from "./routes/auth.routes.js";
 import messageRoutes from "./routes/message.routes.js"
 import userRoutes from "./routes/user.routes.js"
-import mongoDBConn from "./db/mongoDbConn.js";
+import mongoDBConn from "./db/mongoDBConn.js";
 import cookieParser from "cookie-parser";
 import { app,server } from "./socket/socket.js";
 const PORT = process.env.PORT || 5000; 
